@@ -1,3 +1,7 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
 <h1> Hello Wordl!</h1>
 
 <p> Start of project</p>
@@ -5,19 +9,20 @@
 <p> My name is {{ first_name }}</p>	
 
 <p> {{stuff|striptags}}</p>
-<p> {{favourite_pizza}}</p>	
+<p> favourite_pizza</p>	
 
 {% for topping in favourite_pizza %}
+
 	{% if topping == 41 %}
-		{{topping + 100}}
-	{%else%}
+		{{ topping + 100 }}
+	{% else %}
 		{{topping}}<br>
-	{%endif%}	
-
-
+	{% endif %}	
 	
 {% endfor %}
 
 <br></br>
 
 {{ favourite_pizza.0}}
+
+{% endblock %}
